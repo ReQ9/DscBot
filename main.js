@@ -18,4 +18,4 @@ global.player = new Player(client, client.config.opt.discordPlayer);
 require('./src/loader');
 require('./src/events');
 
-client.login("OTA0ODM0MzMwNzM4Njk2MjY0.YYBSow.K8X37f7mujUdeiYgMlFlC2cAu8k");
+client.login("");
