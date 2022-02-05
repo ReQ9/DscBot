@@ -1,6 +1,15 @@
 const { Player } = require('discord-player');
 const { Client, Intents } = require('discord.js');
+const express = require("express");
+const app = express()
 
+app.listen(300, () => {
+  console.log("project is rinning")
+})
+app.get("/", (req, res) => {
+  res.send("Hello")
+})
+const Discord = require("discord.js");
 global.client = new Client({
     intents: [
         Intents.FLAGS.GUILDS,
@@ -18,4 +27,4 @@ global.player = new Player(client, client.config.opt.discordPlayer);
 require('./src/loader');
 require('./src/events');
 
-client.login("");
+client.login(process.env.token);
